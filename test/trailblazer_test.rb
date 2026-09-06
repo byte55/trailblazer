@@ -32,7 +32,7 @@ class TrailblazerTest < Minitest::Spec
       result = Create.wtf?(params: {title: "Dead and Gone"})
     end
 
-    assert_equal output, %(TrailblazerTest::Create
+    assert_equal %(TrailblazerTest::Create
 |-- \e[32mStart.default\e[0m
 |-- \e[32mmodel.build\e[0m
 |-- \e[32mcontract.build\e[0m
@@ -43,17 +43,16 @@ class TrailblazerTest < Minitest::Spec
 |   `-- End.success
 |-- \e[32mpersist.save\e[0m
 `-- End.success
-)
-    assert_equal result.success?, true
-    assert_equal result[:model].to_h, {:title=>"Dead and Gone"}
+), output
+    assert_equal true, result.success?
+    assert_equal({:title=>"Dead and Gone"}, result[:model].to_h)
 
   # invalid!
-      result = Create.wtf?(params: {})
     output, _ = capture_io do
       result = Create.wtf?(params: {})
     end
 
-    assert_equal output, %(TrailblazerTest::Create
+    assert_equal %(TrailblazerTest::Create
 |-- \e[32mStart.default\e[0m
 |-- \e[32mmodel.build\e[0m
 |-- \e[32mcontract.build\e[0m
@@ -63,10 +62,10 @@ class TrailblazerTest < Minitest::Spec
 |   |-- \e[33mcontract.default.call\e[0m
 |   `-- End.failure
 `-- End.failure
-)
+), output
 
-    assert_equal result.success?, false
-    assert_equal result[:mode].to_h, {}
+    assert_equal false, result.success?
+    assert_equal({:title=>nil}, result[:model].to_h)
   end
 end
 
