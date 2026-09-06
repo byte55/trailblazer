@@ -2,7 +2,7 @@
 Trailblazer is an open source project and we would love you to help us make it better.
 
 ## Questions/Help
-If our [guides][guides] nor [docs][api-docs] can help you figure things out, and you're stuck, refrain from posting questions on github issues, and please just find us on the [trailblazer gitter chat][chat] and drop us a line.
+If our [guides][guides] nor [docs][api-docs] can help you figure things out, and you're stuck, refrain from posting questions on github issues, and please just find us on the [trailblazer Zulip chat][chat] and drop us a line.
 
 Keep in mind when asking questions though, an example will get you help faster than anything else you do.
 
@@ -35,7 +35,7 @@ We accept pull requests to Trailblazer for:
 
 Not all features proposed will be added but we are open to having a conversation about a feature you are championing.
 
-###Here's a quick guide:
+### Here's a quick guide:
 #### Fork the Project
 Fork the [project repository][project-repo-link] on Github and check out your copy.
 
@@ -68,8 +68,6 @@ We definitely appreciate pull requests that highlight or reproduce a problem, ev
 
 #### Write Code
 Implement your feature or bug fix.
-
-Ruby style is enforced with [RuboCop](https://github.com/bbatsov/rubocop), run `bundle exec rubocop` and fix any style issues highlighted.
 
 Make sure that `bundle exec rake` completes without errors.
 
@@ -108,8 +106,8 @@ git rebase upstream/master
 git push origin my-feature-branch -f
 ```
 
-#### Update CHANGELOG Again
-Update the [CHANGELOG](CHANGELOG.md) with the pull request number. A typical entry looks as follows.
+#### Update CHANGES.md
+Update [CHANGES.md](CHANGES.md) with the pull request number. A typical entry looks as follows.
 
 ```
 * [#123](https://github.com/trailblazer/trailblazer/pull/123): Your brief description - [@your_gh_handle](https://github.com/your_gh_handle).
@@ -123,13 +121,13 @@ git push origin my-feature-branch -f
 ```
 
 #### Check on Your Pull Request
-Go back to your pull request after a few minutes and see whether it passed muster with Travis-CI. Everything should look green, otherwise fix issues and amend your commit as described above.
+Go back to your pull request after a few minutes and see whether it passed muster with GitHub Actions. Everything should look green, otherwise fix issues and amend your commit as described above.
 
 ## Quality
 
 Committing to OSS projects is always difficult, because all maintainers will adhere to their own quality standards that you don't know. Every projects wants "good code design", and so do we, so here are a few things that you should follow when contributing.
 
-* Good design matters: sometimes a feature could be added with a simple `if <my new case>` to an existing block of code. Usually, an `if` implies that the original design didn't plan on handling multiple cases, or in other words, **a refactoring of the code structure might be necessary**. If you're unsure: [Talk to us!](https://gitter.im/trailblazer/chat)
+* Good design matters: sometimes a feature could be added with a simple `if <my new case>` to an existing block of code. Usually, an `if` implies that the original design didn't plan on handling multiple cases, or in other words, **a refactoring of the code structure might be necessary**. If you're unsure: [Talk to us!][chat]
 * Make smaller pull requests. It is so much easier to discuss something graspable and not a "37 files changed" PR. The sooner we see your code, the earlier we can decide about which way to go. It is incredibly appreciated, though, to send us a link to a branch of yours where we can see the desired changes in total. We can then help splitting those into smaller steps.
 * **Never ever use `if respond_to?`** to add a feature. This is a pattern as seen a lot in Rails core that causes incredibly hard to find ~bugs~ behavior. In Trailblazer, we use "Tell, don't ask!", which means, never try to find out the type of an object via `respond_to?`. If you really have to introspect the type, use `is_a?`. Treat it as a duck, ducks don't speak.
 
@@ -172,7 +170,7 @@ Please do know that we really appreciate and value your time and work.
 [gist]: https://gist.github.com
 [guides]: https://www.trailblazer.to
 [api-docs]: https://www.trailblazer.to/api-docs
-[chat]: https://gitter.im/trailblazer/chat
+[chat]: https://trailblazer.zulipchat.com/
 [repositories]: https://github.com/trailblazer
 [test-link]: https://github.com/trailblazer/trailblazer/tree/master/test
 [project-repo-link]: https://github.com/trailblazer/trailblazer

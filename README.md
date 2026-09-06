@@ -109,11 +109,11 @@ Trailblazer is both used for refactoring legacy apps (we support Ruby 2.5+) and 
 
 ## Documentation
 
-* **The current version is Trailblazer 2.1.** We do have comprehensive [API documenation](https://trailblazer.to/2.1/docs/trailblazer.html) ready for you. If you're new to TRB start with our [LEARN page](https://trailblazer.to/2.1/docs/trailblazer/#trailblazer-learn).
+* **The current version is Trailblazer 2.1.** We do have comprehensive [API documentation](https://trailblazer.to/2.1/docs/trailblazer.html) ready for you. If you're new to TRB start with our [LEARN page](https://trailblazer.to/2.1/docs/trailblazer/#trailblazer-learn).
 * A migration guide from 2.0 can be found [on our website](https://trailblazer.to/2.1/docs/trailblazer.html#trailblazer-2-1-migration).
 * The [1.x documentation is here](http://trailblazer.to/2.0/gems/operation/1.1/index.html).
 
 Make sure to check out the new beginner's guide to learning Trailblazer. The [new book](https://leanpub.com/buildalib) discusses all aspects in a step-wise approach you need to understand Trailblazer's mechanics and design ideas.
 
-![The new begginer's guide.](https://github.com/trailblazer/trailblazer/blob/master/doc/s_hero.png?raw=true)
+![The new beginner's guide.](https://github.com/trailblazer/trailblazer/blob/master/doc/s_hero.png?raw=true)
 
